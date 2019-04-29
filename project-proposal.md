@@ -7,7 +7,6 @@ __Link:__ [https://github.com/Axle7XStriker/machine-translator](https://github.c
 - Aman Bansal (20161008)
 - Shashwat Khandelwal (20161045)
 - Prajwal Shingala (20161207)
-- Rahul Bishnoi (20161101)
 
 
 
@@ -33,9 +32,6 @@ A Phrase-Based Neural Machine Translation System able to translate English text 
 ### Milestones 
 
 - Collect language datasets for English and various Indian languages such as Hindi, Urdu, Punjabi, etc.
-- Develop an RNN Encoder - Decoder taking English - Hindi as the first language pair.
-- Iteratively extend the framework developed for English - Hindi to work with other languages as well.
+- Develop a Phrase-based Statistical Machine Translation model taking English - Hindi as the first language pair.
 - Train and Validate the system to fix its hyperparameters.
 - Test the system on various language datasets both manually and automatically.
-- Develop an interactive UI for the machine translation system. (OPTIONAL) 
-
