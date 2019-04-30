@@ -93,6 +93,9 @@ def extractPhrases(source_target, target_source):
         target_align_idx = trg_align_file.readline()
         #print("Source Text:", source_txt.rstrip('\n'))
 
+        if float(line.strip().split(':')[1].strip()) < 1e-18:
+            continue
+
         word_alignment, source, target = findAlignment(target_txt, source_align_idx, source_txt, target_align_idx)
         print("Source Text:", source)
         print("Target Text:", target)

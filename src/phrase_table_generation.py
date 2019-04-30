@@ -1,5 +1,6 @@
 from collections import defaultdict
 import sys
+import math
 
 def calculateProbability(translation_file, language_model_file, output_file_name):
     '''
@@ -12,7 +13,7 @@ def calculateProbability(translation_file, language_model_file, output_file_name
     for line in inp_file:
         line = line.strip().split('\t')
         if len(line) == 2:
-            lang_model_prob[line[1]] = float(line[0]) * -1
+            lang_model_prob[line[1]] = float(line[0])
     inp_file.close()
 
     data=[]
@@ -26,9 +27,8 @@ def calculateProbability(translation_file, language_model_file, output_file_name
         for src_word in sourceWords:
             if src_word in lang_model_prob:
                 flag = 1
-                lang_prob *= lang_model_prob[src_word]
+                lang_prob += lang_model_prob[src_word]
         if flag:
-            lang_prob = lang_prob * -1
             prob += lang_prob
         data.append(words[0] + '\t' + words[1] + '\t' + str(prob))
     inp_file.close()
