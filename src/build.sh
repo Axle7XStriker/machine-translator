@@ -16,7 +16,7 @@ function help_menu {
 function clean_files {
     ### Clean the files built by previous run of the model ###
     echo "Cleaning in progress..."
-    rm -rf  Dataset/raw  Dataset/intermediate  Dataset/processed  Dataset/*.txt  Dataset/*.lm  ./*.txt 
+    rm -rf  Dataset/raw  Dataset/intermediate  Dataset/processed  Dataset/*.txt  Dataset/*.lm  Dataset/  ./*.txt 
 }
 
 function generate_data {
@@ -25,7 +25,7 @@ function generate_data {
     
     # Word Alignment 
     echo "Word Alignment in progress..."
-    mkdir Dataset/raw Dataset/intermediate Dataset/processed
+    mkdir -p Dataset/raw Dataset/intermediate Dataset/processed
 
     python3 preprocess_parallel.py ./data-files/parallel/training.en ./data-files/parallel/training.hi 1.0
     ./utils/cfilt_preorder/reorderEnglish.sh Dataset/raw/training_source.txt hindi_tuned
