@@ -16,7 +16,7 @@ Currently, only Linux systems are supported.
 
 ### Installation
 #### Linux/Unix
-```$ git clone https://github.com/Axle7XStriker/machine-translator.git```
+```$ git clone https://github.com/Axle7XStriker/machine-translator.git```  
 ```$ cd machine-translator```
 
 ### Usage
